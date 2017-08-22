@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 
 namespace XamarinAndroidCarousel
 {
@@ -14,7 +15,7 @@ namespace XamarinAndroidCarousel
 
             SetContentView(Resource.Layout.Main);
 
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "Xamarin Android Carousel";
 

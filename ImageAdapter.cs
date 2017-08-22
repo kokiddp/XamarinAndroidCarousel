@@ -31,7 +31,7 @@ namespace XamarinAndroidCarousel
 
         public override bool IsViewFromObject(View view, Java.Lang.Object objectValue)
         {
-            return view == ((ImageView)objectValue);
+            return view == (ImageView)objectValue;
         }
 
         [Obsolete]
@@ -49,7 +49,7 @@ namespace XamarinAndroidCarousel
             ImageView imageView = new ImageView(context);
             imageView.SetScaleType(ImageView.ScaleType.CenterCrop);
             imageView.SetImageResource(imageList[position]);
-            (container).AddView(imageView, 0);
+            container.AddView(imageView, 0);
             return imageView;
         }
 
@@ -61,7 +61,7 @@ namespace XamarinAndroidCarousel
 
         public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object objectValue)
         {
-            (container).RemoveView((ImageView)objectValue);
+            container.RemoveView((ImageView)objectValue);
         }
 
         public override void FinishUpdate(ViewGroup container)
